@@ -1,0 +1,47 @@
+class placeOrderMethods{
+
+    static insertName(name){
+        placeOrderElements.textBoxes.name.invoke('val', name);
+    }
+
+    static insertCountry(country){
+        placeOrderElements.textBoxes.country.invoke('val', country);
+    }
+
+    static insertCity(city){
+        placeOrderElements.textBoxes.city.invoke('val', city);
+    }
+
+    static insertCreditCard(creditCard){
+        placeOrderElements.textBoxes.creditCard.invoke('val', creditCard);
+    }
+
+    static insertMonth(month){
+        placeOrderElements.textBoxes.month.invoke('val', month);
+    }
+
+    static insertYear(year){
+        placeOrderElements.textBoxes.year.invoke('val', year);
+    }
+
+    static clickOnPurcharseButton(){
+        placeOrderElements.buttons.purcharse.click();
+    }
+    
+    static clickOnClosedButton(){
+        placeOrderElements.buttons.close.click();
+    }
+
+    static clickOnCloseIcon(){
+        placeOrderElements.buttons.iconClose.click();
+    }
+
+    static clickOnOkButton(){
+        placeOrderElements.orderCreate.okButton.click();
+    }
+
+    static iconVerify(){
+        placeOrderElements.orderCreate.icon.should('be.visible');
+    }
+}
+export default placeOrderMethods;
