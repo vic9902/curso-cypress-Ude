@@ -11,7 +11,7 @@
     "typescript": "^5.5.4"
   },
   "scripts": {
-    "limpiar-reporte": "rimraf ./allure-report",
+    "limpiar-reporte": "rimraf ./allure-report && rimraf allure-results",
     "ejecutar-pruebas": "npx cypress run --headed --browser chrome --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
     "abrir-reporte": "npx allure open",
