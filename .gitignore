@@ -6,3 +6,6 @@ node_modules
 #informes
 allure-report
 allure-results
+
+#ignorar screenshots
+cypress/screenshots

@@ -1,21 +1,10 @@
-import { LoginPage } from "./loginPage";
-describe('Login', () => {
-  it("test", ()=>{
-    cy.visit('https://www.demoblaze.com/');
-    LoginPage.linkLogin.click();
-  });
-  /*
-  it.only('Login con credenciales de standar user', () => {
-    cy.visit('https://www.saucedemo.com/v1/');
-    cy.get("#user-name", {timeout: 10000}).type("standard_user");
-    cy.get("#password").type("secret_sauce");
-    cy.get("#login-button").click();
-  });
-  it('uso del closest', ()=>{
-    cy.visit('https://www.saucedemo.com/v1/');
-    cy.get('#user-name').closest('#login_button_container').then(parent =>{
-      cy.log(parent.attr('class'));
+import loginMethods from "../pages/login/loginMethods";
+
+describe("Test Login", ()=>{
+    it('Login', ()=>{
+        cy.visit('https://www.demoblaze.com/');
+        cy.get('li > a#login2', {timeout: 1000}).click();
+        loginMethods.login("pruebaQA1", "pruebaQA1");
+        cy.get('#nameofuser').should('have.text', 'Welcome pruebaQA1');
     });
-    cy.wait(5000);
-  });*/
 });
