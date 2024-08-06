@@ -1,28 +1,43 @@
 import commonData from "./commonData";
 import commonElements from "./commonElements";
 
-class commonMethods{
-    static navigateToDemoBlaze(){
+class commonMethods {
+    static navigateToDemoBlaze() {
         cy.visit(commonData.url);
     }
 
-    static clickOnhomeOption(){
+    static clickOnhomeOption() {
         commonElements.topMenu.home.click();
     }
-    static clickOnContactOption(){
+    static clickOnContactOption() {
         commonElements.topMenu.contact.click();
     }
-    static clickOnAboutUsOption(){
+    static clickOnAboutUsOption() {
         commonElements.topMenu.aboutUs.click();
     }
-    static clickOnCartOption(){
+    static clickOnCartOption() {
         commonElements.topMenu.cart.click();
     }
-    static clickOnLogInOption(){
+    static clickOnLogInOption() {
         commonElements.topMenu.logIn.click();
     }
-    static clickOnSignInOption(){
+    static clickOnSignInOption() {
         commonElements.topMenu.signUp.click();
+    }
+    static verifyAlert(expectedMessage: string) {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal(expectedMessage);
+        });
+    }
+    static generateRandomString(length = 10) {
+        let result = "";
+        const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < length) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
     }
 }
 export default commonMethods;

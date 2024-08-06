@@ -1,13 +1,14 @@
+import commonMethods from "../common/commonMethods";
 import signupElements from "./signupElements";
 
 class signupMethods {
 
     static insertUsername(username: string) {
-        signupElements.textBoxes.username.type(username);
+        signupElements.textBoxes.username.invoke('val', username);
     }
 
     static insertPassword(password: string) {
-        signupElements.textBoxes.password.type(password);
+        signupElements.textBoxes.password.invoke('val', password);
     }
 
     static clickOnSignUpButton(){
@@ -22,6 +23,10 @@ class signupMethods {
         this.insertUsername(username);
         this.insertPassword(password);
         this.clickOnSignUpButton();
+    }
+
+    static VerifySignUpSuccessfulMessageDisplayed(){
+        commonMethods.verifyAlert('Sign up  successful.');
     }
 }
 export default signupMethods;
