@@ -21,5 +21,9 @@ class commonElements{
             }
         }
     }
+
+    static get signedUser(){
+        return cy.get('a#nameofuser');
+    }
 }
 export default commonElements;

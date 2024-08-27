@@ -26,7 +26,10 @@ class signupMethods {
     }
 
     static VerifySignUpSuccessfulMessageDisplayed(){
-        commonMethods.verifyAlert('Sign up  successful.');
+        commonMethods.verifyAlert('Sign up successful.');
+    }
+    static verifyThatThisUserAlreadyExistMessageDisplayed(){
+        commonMethods.verifyAlert('This user already exist.');
     }
 }
 export default signupMethods;

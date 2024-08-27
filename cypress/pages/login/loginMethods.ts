@@ -1,4 +1,5 @@
 import Logger from "../../utils/logger";
+import commonMethods from "../common/commonMethods";
 import loginElements from "./loginElements";
 
 class loginMethods {
@@ -22,6 +23,14 @@ class loginMethods {
         this.insertPassword(password);
         Logger.subStep('Click on Login')
         this.clickOnLoginButton();
+    }
+
+    static verifyWrongPasswordMessage(){
+        commonMethods.verifyAlert('Wrong password.');
+    }
+
+    static verifyWrongUsernameMessage(){
+        commonMethods.verifyAlert('User does not exist.')
     }
 }
 export default loginMethods;
