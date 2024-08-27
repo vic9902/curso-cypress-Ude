@@ -3,13 +3,13 @@ class homeElements{
     static get categoriesMenu(){
         return{
             get phones(){
-                return cy.get('div.list-group > a#itemc').should('have.text', 'Phones');
+                return cy.contains('a', 'Phones');
             },
             get laptops(){
-                return cy.get('div.list-group > a#itemc').should('have.text', 'Laptops');
+                return cy.contains('a', 'Laptops');
             },
             get monitors(){
-                return cy.get('div.list-group > a#itemc').should('have.text', 'Monitors');
+                return cy.contains('a', 'Monitors');
             }
         }
     }

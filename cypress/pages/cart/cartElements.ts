@@ -15,5 +15,12 @@ class cartElements {
             }
         }
     }
+    static get tableDetails(){
+        return{
+            productName(productName){
+                return cy.contains('.success > :nth-child(2)', productName).should('have.text', productName);
+            }
+        }
+    }
 }
 export default cartElements;
