@@ -32,7 +32,7 @@ class placeOrderElements{
                 return cy.get('button.close').contains('×');
             },
             get purcharse(){
-                return cy.get('button.btn-primary').contains('Pircharse');
+                return cy.get('button.btn-primary').contains('Purchase');
             }
         }
     }
@@ -46,9 +46,11 @@ class placeOrderElements{
                 return cy.get('h2').contains('Thank you for your purcharse!');
             },
             get okButton(){
-                return cy.get('button.confirm').contains('OK');
+                return cy.get('button.confirm.btn-primary').contains('OK');
             }
         }
     }
 
 }
+
+export default placeOrderElements;

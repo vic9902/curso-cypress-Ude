@@ -3,6 +3,8 @@ import commonElements from "./commonElements";
 
 class commonMethods {
     static navigateToDemoBlaze() {
+        cy.clearAllCookies();
+        cy.clearAllLocalStorage();
         cy.visit(commonData.url);
     }
 

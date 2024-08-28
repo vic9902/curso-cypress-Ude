@@ -6,8 +6,16 @@ class cartMethods{
         cartElements.links.delete(productName).click();
     }
 
+    static clickOnPlaceOrderButton(){
+        cartElements.buttons.placeOrder.click();
+    }
+
     static verifyProductAdded(productName){
         cartElements.tableDetails.productName(productName)
+    }
+
+    static verifyCartPageIsShow(){
+        cy.url().should('include', 'cart.html');
     }
 }
 export default cartMethods;

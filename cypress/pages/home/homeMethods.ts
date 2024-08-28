@@ -21,5 +21,9 @@ class homeMethods{
     static verifyProductDisplayed(productName){
         homeElements.product(productName).should('be.visible');
     }
+    
+    static verifyHomePageIsShow(){
+        cy.url().should('include', 'index.html');
+    }
 }
 export default homeMethods;

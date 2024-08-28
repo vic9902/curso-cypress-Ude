@@ -1,7 +1,8 @@
+import placeOrderElements from '../place-order/placeOrderElements';
 class placeOrderMethods{
 
     static insertName(name){
-        placeOrderElements.textBoxes.name.invoke('val', name);
+        placeOrderElements.textBoxes.name.type(name);
     }
 
     static insertCountry(country){
@@ -42,6 +43,15 @@ class placeOrderMethods{
 
     static iconVerify(){
         placeOrderElements.orderCreate.icon.should('be.visible');
+    }
+
+    static insertOrderInformation(data){
+        this.insertName(data.name);
+        this.insertCountry(data.country);
+        this.insertCity(data.city);
+        this.insertCreditCard(data.creditCard);
+        this.insertMonth(data.month);
+        this.insertYear(data.year);
     }
 }
 export default placeOrderMethods;
