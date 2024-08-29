@@ -11,17 +11,22 @@ class Logger{
     }
 
     static verification(descripcion){
-        const text = `Step # ${descripcion}`;
+        const text = `Verification # ${descripcion}`;
         cy.log(text);
         cy.allure().step(text);
     }
     static subStep(descripcion){
-        const text = `Step # ${descripcion}`;
+        const text = `SubStep # ${descripcion}`;
         cy.log(text);
         cy.allure().step(text);
     }
     static subVerification(descripcion){
-        const text = `Step # ${descripcion}`;
+        const text = `Subverification # ${descripcion}`;
+        cy.log(text);
+        cy.allure().step(text);
+    }
+    static postCondition(descripcion){
+        const text = `postCondition # ${descripcion}`;
         cy.log(text);
         cy.allure().step(text);
     }

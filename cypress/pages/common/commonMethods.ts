@@ -46,5 +46,15 @@ class commonMethods {
     static verifySignedUser(username){
         commonElements.signedUser.should('have.text', `Welcome ${username}`);
     }
+    static logOut(){
+        cy.log('Inicio logOut')
+        cy.get('body').then(($body) =>{
+            if($body.find('#logout2').length > 0){
+                cy.log("Entrando a la condición logout");
+                commonElements.topMenu.logOut.click();
+            }
+        });
+        cy.log('No entro en logOut')
+    }
 }
 export default commonMethods;

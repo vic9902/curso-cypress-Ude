@@ -9,7 +9,7 @@ describe(commonData.testSuites.registroYAutentication, () => {
     const validData = loginData.validCredentials;
     const invalidData = loginData.invalidCredentials;
 
-    it('Inicio de sesion valido', () => {
+    it.only('Inicio de sesion valido', () => {
 
         Logger.stepNumber(1);
         Logger.step('Navegar a la página de inicio');
@@ -29,6 +29,9 @@ describe(commonData.testSuites.registroYAutentication, () => {
         loginMethods.clickOnLoginButton();
         Logger.verification("Verificar que se redirige al usuario a la página de inicio");
         commonMethods.verifySignedUser(validData.username);
+        Logger.postCondition("Hacer log Out");
+        commonMethods.logOut();
+
     });
 
     it('Inicio de sesion con contraseña invalida', () => {

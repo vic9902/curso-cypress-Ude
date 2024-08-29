@@ -18,6 +18,9 @@ class commonElements{
             },
             get signUp(){
                 return cy.contains('a', 'Sign up');
+            },
+            get logOut(){
+                return cy.get('#logout2').should('have.text', 'Log out');
             }
         }
     }

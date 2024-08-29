@@ -22,5 +22,10 @@ class cartElements {
             }
         }
     }
+    static get table(){
+        return cy.get('#tbodyid');
+
+    }
+
 }
 export default cartElements;
