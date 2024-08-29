@@ -7,6 +7,8 @@ phases:
   pre_build:
     commands:
       - npm install
+      - echo "NPM install completed"
+      - npm ls --depth=0
 
   build:
     commands:
