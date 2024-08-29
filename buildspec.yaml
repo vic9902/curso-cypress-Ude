@@ -5,11 +5,9 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
+      - npm --version
+      - node --version
       - npm install
-
-  pre_build:
-    commands:
-      - echo "Pre-build phase complete"
 
   build:
     commands:
