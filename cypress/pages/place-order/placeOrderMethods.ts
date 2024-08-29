@@ -38,6 +38,7 @@ class placeOrderMethods{
     }
 
     static clickOnOkButton(){
+        cy.wait(1000);
         placeOrderElements.orderCreate.okButton.click();
     }
 

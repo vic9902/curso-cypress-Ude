@@ -38,7 +38,7 @@ describe(commonData.testSuites.catalogoYCompra, () => {
         homeMethods.verifyProductDisplayed('ASUS Full HD');
     });
 
-    it.only("Agregar un producto al carrito", () => {
+    it("Agregar un producto al carrito", () => {
 
         Logger.stepNumber(1);
         Logger.step("Iniciar sesión como un usuario registrado");
@@ -134,5 +134,6 @@ describe(commonData.testSuites.catalogoYCompra, () => {
         placeOrderMethods.iconVerify();
         placeOrderMethods.clickOnOkButton();
         homeMethods.verifyHomePageIsShow();
+        commonMethods.logOut();
     });
 });
