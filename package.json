@@ -12,7 +12,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies":{
-    "allure-commandline": "^2.29.0",
+    "allure-commandline": "^2.29.0"
   },
 
   "scripts": {
