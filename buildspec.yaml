@@ -6,14 +6,14 @@ phases:
       nodejs: latest
   pre_build:
     commands:
+      - dnf install -y xorg-x11-server-Xvfb gtk3-devel nss alsa-lib
       - npm install
       - echo "NPM install completed"
       - npm ls --depth=0
 
   build:
     commands:
-      - dnf install -y xorg-x11-server-Xvfb gtk3-devel nss alsa-lib
-      - npm run cy:parallel
+      - npm run ci
   post_build:
     commands:
       - aws s3  sync allure-report s3://dashboard-pruebas-cypress/
