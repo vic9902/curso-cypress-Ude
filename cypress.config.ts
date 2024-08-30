@@ -3,6 +3,7 @@ import { configureAllureAdapterPlugins } from '@mmisty/cypress-allure-adapter/pl
 
 export default defineConfig({
   //retries: 1, // si la prueba falla intenta nuevamente (util para realizar revisiones)
+  video: false,
   e2e:{
     setupNodeEvents(on, config){
       configureAllureAdapterPlugins(on, config);
