@@ -14,3 +14,7 @@ phases:
     commands:
       - dnf install -y xorg-x11-server-Xvfb gtk3-devel nss alsa-lib
       - npm run cy:parallel
+  post_build:
+    commands:
+      - aws s3  sync allure-report s3://dashboard-pruebas-cypress/
+      - aws s3 cp --recursive --acl public-read s3://dashboard-pruebas-cypress/ s3://dashboard-pruebas-cypress/ --metadata-directive REPLACE
