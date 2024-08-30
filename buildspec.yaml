@@ -18,4 +18,4 @@ phases:
     commands:
       - aws s3 sync allure-report s3://dashboard-pruebas-cypress/
       - aws s3 cp --recursive --acl public-read s3://dashboard-pruebas-cypress/ s3://dashboard-pruebas-cypress/ --metadata-directive REPLACE
-      - echo report url 
+      - echo "The HTML report can be found here <http://dashboard-pruebas-cypress.s3-website.us-east-2.amazonaws.com>"
