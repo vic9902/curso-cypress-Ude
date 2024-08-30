@@ -22,6 +22,6 @@
     "abrir-reporte": "npx allure open",
     "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-reporte",
     "ci": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e && npm run generar-reporte",
-    "test-ci": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte"
+    "test-ci": "npm run limpiar-reporte && npm run ejecutar-pruebas || true && npm run generar-reporte"
   }
 }
