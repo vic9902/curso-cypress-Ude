@@ -20,6 +20,8 @@ describe("Test Login", ()=>{
         cy.contains('li', 'Cart').click();
 
         cartMethods.clickOnDeleteLink('Nexus 6');
+        cy.wait(3000);
+        cartMethods.clickOnDeleteLink('Samsung galaxy s6');
 
     });
 });
