@@ -4,8 +4,8 @@ node_modules
 .idea
 
 #informes
-allure-report/
-allure-results/
+#allure-report/
+#allure-results/
 
 #ignorar screenshots
 cypress/screenshots
