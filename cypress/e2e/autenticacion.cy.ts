@@ -4,6 +4,7 @@ import loginData from "../pages/login/loginData";
 import loginMethods from "../pages/login/loginMethods";
 import Logger from "../utils/logger";
 
+
 describe(commonData.testSuites.registroYAutentication, () => {
 
     const validData = loginData.validCredentials;
@@ -13,7 +14,7 @@ describe(commonData.testSuites.registroYAutentication, () => {
 
         Logger.stepNumber(1);
         Logger.step('Navegar a la página de inicio');
-        commonMethods.navigateToDemoBlaze();
+
 
         Logger.stepNumber(2);
         Logger.step("Hacer clic en 'log in' en la barra de navegación");
@@ -38,7 +39,6 @@ describe(commonData.testSuites.registroYAutentication, () => {
 
         Logger.stepNumber(1);
         Logger.step('Navegar a la página de inicio');
-        commonMethods.navigateToDemoBlaze();
 
         Logger.stepNumber(2);
         Logger.step("Hacer clic en 'log in' en la barra de navegación");
@@ -60,7 +60,7 @@ describe(commonData.testSuites.registroYAutentication, () => {
 
         Logger.stepNumber(1);
         Logger.step('Navegar a la página de inicio');
-        commonMethods.navigateToDemoBlaze();
+
 
         Logger.stepNumber(2);
         Logger.step("Hacer clic en 'log in' en la barra de navegación");

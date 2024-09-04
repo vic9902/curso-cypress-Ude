@@ -14,7 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import commonMethods from '../pages/common/commonMethods';
 import './commands'
 import '@mmisty/cypress-allure-adapter/support';
+
+beforeEach(()=>{
+    commonMethods.navigateToDemoBlaze();
+});
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

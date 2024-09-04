@@ -19,8 +19,6 @@ describe(commonData.testSuites.catalogoYCompra, () => {
 
         Logger.stepNumber(1);
         Logger.step("Iniciar sesión como un usuario registrado");
-        Logger.subStep("Navegar a la aplicación");
-        commonMethods.navigateToDemoBlaze();
         Logger.subStep("Hacer click en el botón de 'log in'");
         commonMethods.clickOnLogInOption();
         Logger.step("Hacer login");
@@ -42,8 +40,6 @@ describe(commonData.testSuites.catalogoYCompra, () => {
 
         Logger.stepNumber(1);
         Logger.step("Iniciar sesión como un usuario registrado");
-        Logger.subStep("Navegar a la aplicación");
-        commonMethods.navigateToDemoBlaze();
         Logger.subStep("Hacer click en el botón de 'log in'");
         commonMethods.clickOnLogInOption();
         Logger.step("Hacer login");
@@ -82,8 +78,6 @@ describe(commonData.testSuites.catalogoYCompra, () => {
 
         Logger.stepNumber(1);
         Logger.step("Iniciar sesión como un usuario registrado");
-        Logger.subStep("Navegar a la aplicación");
-        commonMethods.navigateToDemoBlaze();
         Logger.subStep("Hacer click en el botón de 'log in'");
         commonMethods.clickOnLogInOption();
         Logger.step("Hacer login");
